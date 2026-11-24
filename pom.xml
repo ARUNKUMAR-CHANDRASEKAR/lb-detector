@@ -18,6 +18,19 @@
     <name>lb-detector</name>
     <description>Detects whether a web endpoint sits behind a load balancer, and which one</description>
 
+    <developers>
+        <developer>
+            <name>Arunkumar Chandrasekar</name>
+            <email>cakshine@gmail.com</email>
+            <url>https://github.com/ARUNKUMAR-CHANDRASEKAR</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/ARUNKUMAR-CHANDRASEKAR/lb-detector</url>
+        <connection>scm:git:https://github.com/ARUNKUMAR-CHANDRASEKAR/lb-detector.git</connection>
+    </scm>
+
     <properties>
         <java.version>25</java.version>
         <springdoc.version>3.1.1</springdoc.version>

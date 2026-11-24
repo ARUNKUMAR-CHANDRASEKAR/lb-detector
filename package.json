@@ -2,6 +2,15 @@
   "name": "lb-detector",
   "version": "1.0.0",
   "description": "Detects whether a web endpoint sits behind a load balancer (Java 25 + Spring Boot 4). npm scripts are convenience wrappers around Maven and Docker.",
+  "author": {
+    "name": "Arunkumar Chandrasekar",
+    "email": "cakshine@gmail.com",
+    "url": "https://github.com/ARUNKUMAR-CHANDRASEKAR"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ARUNKUMAR-CHANDRASEKAR/lb-detector.git"
+  },
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
