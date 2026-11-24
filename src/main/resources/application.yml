@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: lb-detector
+  threads:
+    virtual:
+      enabled: true          # Java 25 virtual threads for request handling
+  mvc:
+    problemdetails:
+      enabled: true          # RFC 9457 error bodies
+
+server:
+  port: 8080
+  shutdown: graceful
+
+lbdetector:
+  default-samples: 20
+  max-samples: 100
+  timeout: 10s
+  concurrency: 4             # probes in flight per scan - be polite to targets
+  tls-samples: 6
+  dns-lookups: 5
+  max-concurrent-scans: 4
+  allow-private-targets: false   # SSRF guard; set true to scan internal hosts
+  user-agent: lb-detector/1.0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true        # /actuator/health/liveness and /readiness for Kubernetes
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    com.example.lbdetector: INFO

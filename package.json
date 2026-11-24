@@ -1,0 +1,25 @@
+{
+  "name": "lb-detector",
+  "version": "1.0.0",
+  "description": "Detects whether a web endpoint sits behind a load balancer (Java 25 + Spring Boot 4). npm scripts are convenience wrappers around Maven and Docker.",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "mvn -B package -DskipTests",
+    "test": "mvn -B verify",
+    "start": "mvn spring-boot:run",
+    "start:jar": "java -jar target/lb-detector.jar",
+    "scan": "java -jar target/lb-detector.jar",
+    "clean": "mvn -B clean",
+    "docker:build": "docker build -t lb-detector .",
+    "docker:run": "docker run --rm -p 8080:8080 lb-detector",
+    "docker:scan": "docker run --rm lb-detector"
+  },
+  "keywords": [
+    "load-balancer",
+    "detection",
+    "java",
+    "spring-boot"
+  ],
+  "packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800"
+}
