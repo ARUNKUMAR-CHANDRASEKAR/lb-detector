@@ -112,6 +112,10 @@ docker run -p 8080:8080 lb-detector
 docker run --rm lb-detector --target=https://www.example.com/   # CLI mode
 ```
 
+## Test report
+
+The latest test results (43 of 43 passing), the defect found during testing and the known coverage gaps are in [docs/TEST-REPORT.md](docs/TEST-REPORT.md).
+
 ## Configuration (`application.yml`)
 
 | Property | Default | Meaning |
